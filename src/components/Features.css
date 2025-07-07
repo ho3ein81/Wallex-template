@@ -1,0 +1,72 @@
+.features {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff; /* پس‌زمینه سفید */
+  color: #666666; /* متن خاکستری */
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #626263; /* آبی تیره تیتر */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.feature-item {
+  background-color: #ffffff; /* پس‌زمینه سفید */
+  padding: 30px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0; /* خاکستری روشن روی هاور */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item .icon {
+  font-size: 2.5rem;
+  color: #1976d2; /* آبی */
+  margin-bottom: 15px;
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.feature-item:hover .icon {
+  font-size: 2.8rem;
+  color: #0d47a1; /* آبی پررنگ‌تر روی هاور */
+}
+
+.feature-item h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #555555; /* خاکستری تیره */
+  transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.feature-item:hover h3 {
+  font-size: 1.5rem;
+  color: #333333; /* تیره‌تر روی هاور */
+}
+
+.feature-item p {
+  color: #888888; /* خاکستری متوسط */
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+@media screen and (min-width: 987px) {
+  .features-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 0 50px;
+  }
+}
+

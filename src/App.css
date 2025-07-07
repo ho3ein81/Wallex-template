@@ -1,38 +1,393 @@
-.App {
-  text-align: center;
-}
+body {
+      margin: 0;
+      font-family: "Vazirmatn", sans-serif;
+      background-color: #ffffff;
+    }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 1em;
+  position: sticky;  /* اینو تغییر بده */
+  top: 0;            /* اینم اضافه کن */
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  z-index: 1000;     /* که همیشه بالاتر باشه */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* سایه ظریف برای تفکیک بهتر */
+}
+
+
+    /* لوگو */
+    .logo {
+  
+      display: inline;
+    }
+    .custom-select {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.5rem;
+  outline: none;
+}
+
+
+    /* دکمه همبرگر */
+    .menu-toggle {
+      color: #000000;
+      font-size: 2rem;
+      cursor: pointer;
+      user-select: none;
+      display: block;
+      background: none;
+      border: none;
+    }
+
+    /* دکمه ورود */
+.btn-login-register {
+  font-size: 0.9375rem;
+  border-radius: 0.625rem;
+  padding: 0.4125rem 0.975rem;
+  background-color: #000000;
+  border: 1px solid #01003e;
+  color: #ebeaea;
+  cursor: pointer;
+
+  order: 3;
+  margin-inline-start: auto;
+  margin-inline-end: 0;
+}
+          
+    
+
+    /* منو */
+    .nav {
+      display: none;
+      background-color: #ffffff;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 12px rgba(77, 74, 74, 0.3);
+      z-index: 1000;
+    }
+
+    .nav.active {
+      display: block;
+      animation: slideDown 0.4s ease forwards;
+    }
+
+    .nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav ul li {
+      border-bottom: 1px solid #ebeaea;
+    }
+
+    .nav ul li:last-child {
+      border-bottom: none;
+    }
+
+    .nav ul li a {
+      display: block;
+      padding: 1em;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .nav ul li a:hover {
+      background-color: #555;
+      color: #fff;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+   
+
+    /* حالت بزرگ صفحه - دسکتاپ */
+    @media screen and (min-width: 987px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .nav {
+        display: block ;
+        position: static;
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .nav ul {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .nav ul li {
+        border-bottom: none;
+      }
+
+      .nav ul li a {
+        padding: 0.5em 0;
+        color: #000;
+      }
+
+      .nav ul li a:hover {
+        background-color: transparent;
+        color: #00dddd;
+      }
+    }
+
+    /* سکشن هرو و بقیه استایل‌های تو خواسته‌ت */
+    .hero {
+      background-color: #0f2341;
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .main-body {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .img-body {
+      padding-left: 10px;
+      height: 370px;
+      width: auto;
+      float: left;
+      margin-top: -2rem;
+      margin-left: 2rem;
+    }
+   
+    .hero-text {
+      position: absolute;
+      right: -3rem;
+      text-align: right;
+      color: #fff;
+      padding: 1rem;
+      max-width: 600px;
+      margin: 10rem;
+    }
+
+    .hero-text h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    }
+    .main-btn-ctn{
+      border: #ebeaea73 solid 1px;
+      border-radius: 0.5rem;
+      
+     
+      
+      
+      
+    }
+    .btn-cta2 {
+      background-color: #ffffff;
+      color: #0d0d2b;
+      padding: 0.5rem 0.6rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .input-btn{
+      background-color: #0f2341;
+      border: #0f2341 solid 1px;
+      border-radius: 0.5rem;
+      padding: 0.5rem 0.6rem;
+      padding-left: 8rem;
+      display: inline-block;
+     
+      
+    }
+    .btn-cta {
+      background-color: #ffffff;
+      color: #0d0d2b;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-cta:hover {
+      background-color: #00dddd;
+      color: #000;
+    }
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: -1rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+
+.grid-item {
+  background-color: #ffffff;
+  height: 2rem;
+  border-left: 1px solid #e0e0e0;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+}
+.btn-cta{
+  display: none;
+}
+body {
+  font-family: 'Vazirmatn', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+    
+    /* ریسپانسیو موبایل */
+    @media screen and (max-width: 986px), screen and (max-height: 621px) {
+      
+
+      .hero-image-wrapper {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 2rem;
+      }
+
+      .img-body {
+        height: auto;
+        width: 100%;
+        max-width: 500px;
+        padding: 1rem;
+        margin: 0 auto;
+        transform: translateY(-10px);
+      }
+
+      .hero-text {
+        position: static;
+        transform: none;
+        text-align: center;
+        padding: 1rem;
+        margin: 0;
+      }
+      .btn-cta{
+        display: none;
+      }
+      .input-btn{
+        display: none;
+      }
+
+      .btn-cta2 {
+        width: 100%;
+        background-color: #ebeaea;
+        color: #000;
+      }
+      .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px; /* فاصله یک پیکسلی بین آیتم‌ها که مثل border عمل کنه */
+  width: 80%;
+  max-width: 1200px;
+  margin-top: -1rem;
+  background-color: #ffffff; /* این به‌جای border مشترک بین آیتم‌ها */
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1px; /* برای اینکه لبه‌ها هم رنگ داشته باشه */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.grid-item {
+  background-color: #ffffff; /* رنگ داخلی آیتم‌ها */
+  height: 2rem;
+ 
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+}
+    }
+    
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  to {
-    transform: rotate(360deg);
+  60% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+.grid-item {
+  opacity: 0;
+  animation: slideFade 0.8s ease-in-out forwards;
+}
+
+.grid-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.grid-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.grid-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.grid-item:nth-child(4) {
+  animation-delay: 0.7s;
+}
+ 
+/* properties */
+

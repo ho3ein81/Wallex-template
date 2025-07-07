@@ -1,0 +1,101 @@
+.why-wallex {
+  background-color: #fff;
+  color: #444;
+  padding: 0px 20px;
+  padding-bottom: 60px;
+  text-align: center;
+  direction: rtl;
+  font-family: 'sans-serif';
+}
+
+.why-wallex h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #6c6c6c;
+}
+
+.why-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+
+.why-item {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+  text-align: center;
+}
+
+.why-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+}
+
+.why-item h3 {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.why-item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+.why-item {
+    flex-direction: row;       /* افقی شدن آیکون و متن */
+    align-items: flex-start;  /* بالاتر چینش عمودی */
+    text-align: right;
+  }
+  .icon {
+    margin-bottom: 0;
+    margin-right: 15px; /* فاصله آیکون از متن */
+    flex-shrink: 0;     /* کوچک نشود */
+  }
+  .content {
+    flex: 1; /* گرفتن کل فضای باقی */
+  }
+  
+
+/* حالت تبلت: دو ستون */
+@media screen and (min-width: 768px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+
+/* حالت دسکتاپ بزرگ: ۳ ستون و آیتم‌های خاص با span */
+@media screen and (min-width: 1200px) {
+  .why-wallex{
+    margin-right: 180px;
+    margin-left: 180px;
+  }
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+.why-item {
+    text-align: center;
+    padding: 10px;
+  }
+  .why-item:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  .why-item:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  /* آیتم‌های بعدی به صورت پیش‌فرض 1 ستون می‌مونن */
+}
+.icon {
+  font-size: 2.5rem;
+  color: #1976d2;
+  margin-bottom: 15px;
+}
+
+

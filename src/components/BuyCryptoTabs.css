@@ -1,0 +1,68 @@
+.buy-crypto-tabs {
+  background: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  direction: rtl;
+  font-family: sans-serif;
+}
+
+.buy-crypto-tabs h2 {
+    
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.buy-crypto-tabs h3 {
+  color: #000000;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.tab-content {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.tab-icon {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.tab-content p {
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.8;
+}
+
+.tab-buttons {
+  margin-top: 20px;
+}
+
+.tab-buttons button {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #1976d2;
+  font-size: 1rem;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons button.active {
+  background-color: #1976d2;
+  color: #fff;
+}
+.tab-icon img {
+  width: auto;
+  height: 200px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
