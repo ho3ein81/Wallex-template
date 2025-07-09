@@ -76,4 +76,10 @@
     padding-right: 210px;
   }
 }
-
+/* price */
+.crypto-price {
+  font-family: 'monospace';
+  margin-top: 6px;
+  font-size: 14px;
+  color: #666;
+}
